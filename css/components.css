@@ -1,0 +1,119 @@
+/* Boutons */
+.btn {
+  display: inline-block;
+  background: var(--highlight);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+.btn-small {
+  margin: 1rem;
+  background: var(--highlight);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.btn-small:hover {
+  background: var(--accent);
+}
+
+/* Cartes génériques */
+.card {
+  background: var(--bg-dark);
+  border: 1px solid #222;
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.card h3 {
+  color: var(--accent);
+  margin: 1rem;
+  font-size: 1.25rem;
+}
+
+.card p {
+  flex: 1;
+  padding: 0 1rem;
+  font-size: 0.9rem;
+}
+
+/* Tooltips */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.75rem 1.25rem;
+  background: var(--bg-dark);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  transition: transform var(--transition);
+}
+.tooltip:hover,
+.tooltip:focus {
+  transform: translateY(-3px);
+}
+.tooltip::after {
+  content: attr(data-description);
+  display: none;
+  background: var(--bg-darker);
+  color: var(--text-light);
+  padding: 1rem;
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  white-space: normal;
+  max-width: 220px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.tooltip:hover::after,
+.tooltip:focus::after {
+  display: block;
+}
+
+/* On s'est aidé de Copilot car on arrivait pas à faire en sorte que les tooltips ne se superposent pas */
+@media (min-width: 770px) {
+  .tooltip::after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(0.5rem);
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    margin-top: 0;
+    z-index: 10;
+    transition: opacity 0.2s, visibility 0.2s;
+  }
+  .tooltip:hover::after,
+  .tooltip:focus::after {
+    opacity: 1;
+    visibility: visible;
+  }
+}

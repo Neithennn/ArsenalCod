@@ -1,0 +1,35 @@
+/* Fonts + vars */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+:root {
+  --bg-dark: #1f1f1f;
+  --bg-darker: #121212;
+  --text-light: #e0e0e0;
+  --accent: #7ed957;
+  --highlight: #ff4500;
+  --radius: 0.25rem;
+  --transition: 0.2s ease-in-out;
+}
+
+/* Reset global + police */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Scroll doux */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body setup */
+body {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.4;
+}

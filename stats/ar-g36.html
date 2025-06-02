@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>G36 – Statistiques</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/stats.css">
+</head>
+
+<body>
+  <header>
+    <h1>Arsenal COD</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../ar.html">Assault Rifles</a></li>
+        <li><a href="ar-g36.html" class="active">G36</a></li>
+        <li><a href="../about.html">À propos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Résumé -->
+    <section class="stats-summary">
+      <img src="../assets/images/ar-g36.png" alt="G36">
+      <div class="details">
+        <h2>G36</h2>
+        <p>Précision et faible recul, excellent contrôle à moyenne portée.</p>
+      </div>
+    </section>
+
+    <!-- Sélecteur d'accessoires -->
+    <section class="accessories">
+      <h3>Choisissez vos accessoires</h3>
+      <form id="accessory-form">
+        <fieldset>
+          <legend>Viseur</legend>
+          <label><input type="radio" name="sight" value="none" checked> Aucun</label>
+          <label><input type="radio" name="sight" data-precision="9"> ACOG (+9 % précision)</label>
+          <label><input type="radio" name="sight" data-precision="6"> Holographique (+6 % précision)</label>
+          <label><input type="radio" name="sight" data-precision="11"> Thermique (+11 % précision)</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Bouche (Muzzle)</legend>
+          <label><input type="radio" name="muzzle" value="none" checked> Aucun</label>
+          <label><input type="radio" name="muzzle" data-damage="-4" data-recoil="-12"> Silencieux (–4 pts dégâts, –12 %
+            recul)</label>
+          <label><input type="radio" name="muzzle" data-recoil="-16"> Compensateur (–16 % recul)</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Canon</legend>
+          <label><input type="radio" name="barrel" value="none" checked> Aucun</label>
+          <label><input type="radio" name="barrel" data-range="14"> Canon long (+14 % portée)</label>
+          <label><input type="radio" name="barrel" data-mobility="-6"> Canon court (–6 % mobilité)</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Poignée</legend>
+          <label><input type="radio" name="grip" value="none" checked> Aucun</label>
+          <label><input type="radio" name="grip" data-recoil="-7" data-reload="7"> Poignée tactique (–7 % recul, +7 %
+            rechargement)</label>
+          <label><input type="radio" name="grip" data-recoil="-12"> Poignée verticale (–12 % recul)</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Chargeur</legend>
+          <label><input type="radio" name="magazine" value="none" checked> Standard</label>
+          <label><input type="radio" name="magazine" data-magazine="10" data-reload="5"> Chargeur étendu (+10 coups, +5
+            % rechargement)</label>
+          <label><input type="radio" name="magazine" data-reload="-5"> Chargeur rapide (–5 % rechargement)</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Crosse (Stock)</legend>
+          <label><input type="radio" name="stock" value="none" checked> Aucun</label>
+          <label><input type="radio" name="stock" data-mobility="6"> Crosse légère (+6 % mobilité)</label>
+          <label><input type="radio" name="stock" data-recoil="-14"> Crosse tactique (–14 % recul)</label>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- Tableau des stats -->
+    <section class="stats-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Statistique</th>
+            <th>Valeur de base</th>
+            <th>Valeur actuelle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-stat="damage">
+            <td>Dégâts</td>
+            <td>75</td>
+            <td class="value">75</td>
+          </tr>
+          <tr data-stat="fire-rate">
+            <td>Cadence de tir (RPM)</td>
+            <td>620</td>
+            <td class="value">620</td>
+          </tr>
+          <tr data-stat="range">
+            <td>Portée efficace (m)</td>
+            <td>380</td>
+            <td class="value">380</td>
+          </tr>
+          <tr data-stat="mobility">
+            <td>Mobilité (%)</td>
+            <td>55</td>
+            <td class="value">55</td>
+          </tr>
+          <tr data-stat="precision">
+            <td>Précision (%)</td>
+            <td>72</td>
+            <td class="value">72</td>
+          </tr>
+          <tr data-stat="recoil">
+            <td>Recul (%)</td>
+            <td>40</td>
+            <td class="value">40</td>
+          </tr>
+          <tr data-stat="reload">
+            <td>Vitesse rechargement (s)</td>
+            <td>2.4</td>
+            <td class="value">2.4</td>
+          </tr>
+          <tr data-stat="magazine">
+            <td>Chargeur (coups)</td>
+            <td>30</td>
+            <td class="value">30</td>
+          </tr>
+          <tr data-stat="stability">
+            <td>Stabilité (%)</td>
+            <td>60</td>
+            <td class="value">60</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Arsenal COD</p>
+      <span class="footer-separator">|</span>
+      <a href="../about.html">À propos</a>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="../js/pages/stats.js"></script>
+</body>
+
+</html>

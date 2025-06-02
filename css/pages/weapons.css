@@ -1,0 +1,47 @@
+/* Intro catégorie */
+.description h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.description p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* Grille armes */
+.weapons-grid {
+    padding: 2rem;
+    background: var(--bg-darker);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+/* Centre contenu cartes */
+.weapons-grid .card h3,
+.weapons-grid .card p {
+    text-align: center;
+}
+
+/* Btn dans cartes */
+.weapons-grid .btn-small {
+    margin: 0.75rem auto 1rem;
+    display: block;
+}
+
+/* Image carte agrandie */
+.weapons-grid .card img {
+    height: 160px;
+    object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .weapons-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+}

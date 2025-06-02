@@ -1,0 +1,151 @@
+/* Résumé visuel stats */
+.stats-summary {
+  padding: 2rem;
+  background: var(--bg-darker);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats-summary img {
+  width: 250px;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+.stats-summary .details {
+  max-width: 400px;
+  color: var(--text-light);
+}
+
+.stats-summary .details h2 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+/* Tableau stats */
+.stats-table {
+  padding: 2rem;
+  overflow-x: auto;
+  background: var(--bg-dark);
+}
+
+.stats-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stats-table th,
+.stats-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+.stats-table th {
+  color: var(--accent);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Effets transition sur valeur */
+.stats-table .value {
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out,
+    transform 0.2s ease-in-out;
+}
+
+.stats-table .value.modified {
+  font-weight: bold;
+  color: #111;
+  background-color: var(--highlight);
+  border-radius: var(--radius);
+  padding: 0.1rem 0.4rem;
+  transform: scale(1.05);
+}
+
+/* Bloc accessoires */
+.accessories {
+  padding: 2rem;
+  background: var(--bg-dark);
+}
+
+.accessories h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Grille catégories accessoires */
+.accessories form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* Fieldset catégorie */
+.accessories fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Légende accessoire */
+.accessories legend {
+  color: var(--accent);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+  text-align: center;
+}
+
+/* Label accessoire stylé */
+.accessories label {
+  background: var(--bg-darker);
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Input accessoires (agrandi) */
+.accessories input[type="radio"],
+.accessories input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 0.4rem;
+}
+
+/* Hover label */
+.accessories label:hover {
+  background: rgba(126, 217, 87, 0.1);
+}
+
+/* Option sélectionnée */
+.accessories input:checked+label {
+  background: var(--highlight);
+  color: #111;
+}
+
+/* Responsive mobile */
+@media (max-width: 600px) {
+  .stats-summary {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stats-summary img {
+    width: 200px;
+  }
+
+  .accessories form {
+    grid-template-columns: 1fr;
+  }
+}

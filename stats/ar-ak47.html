@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AK-47 – Statistiques</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/stats.css">
+</head>
+
+<body>
+  <header>
+    <h1>Arsenal COD</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../ar.html">Assault Rifles</a></li>
+        <li><a href="ar-ak47.html" class="active">AK-47</a></li>
+        <li><a href="../about.html">À propos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Résumé -->
+    <section class="stats-summary">
+      <img src="../assets/images/ar-ak47.png" alt="AK-47">
+      <div class="details">
+        <h2>AK-47</h2>
+        <p>Le classique indétrônable, excellent compromis entre dégâts et cadence.</p>
+      </div>
+    </section>
+
+    <!-- Sélecteur d'accessoires -->
+    <section class="accessories">
+      <h3 class="accessory-title">Choisissez vos accessoires</h3>
+      <br>
+      <form id="accessory-form">
+
+        <fieldset>
+          <legend>Viseur</legend>
+          <label><input type="radio" name="sight" value="none" checked> Aucun</label>
+          <label><input type="radio" name="sight" data-precision="10"> ACOG (+10 % précision)</label>
+          <label><input type="radio" name="sight" data-precision="5"> Holographique (+5 % précision)</label>
+          <label><input type="radio" name="sight" data-precision="8"> Reflex (+8 % précision)</label>
+          <label><input type="radio" name="sight" data-precision="12"> Thermique (+12 % précision)</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Bouche</legend>
+          <label><input type="radio" name="muzzle" value="none" checked> Aucun</label>
+          <label><input type="radio" name="muzzle" data-damage="-5" data-recoil="-10"> Silencieux (–5 pts dégâts, –10 %
+            recul)</label>
+          <label><input type="radio" name="muzzle" data-recoil="-15"> Compensateur (–15 % recul)</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Canon</legend>
+          <label><input type="radio" name="barrel" value="none" checked> Aucun</label>
+          <label><input type="radio" name="barrel" data-range="15"> Canon long (+15 % portée)</label>
+          <label><input type="radio" name="barrel" data-mobility="-5"> Canon court (–5 % mobilité)</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Poignée</legend>
+          <label><input type="radio" name="grip" value="none" checked> Aucun</label>
+          <label><input type="radio" name="grip" data-recoil="-5" data-reload="10"> Poignée tactique (–5 % recul, +10 %
+            rechargement)</label>
+          <label><input type="radio" name="grip" data-recoil="-8"> Poignée verticale (–8 % recul)</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Chargeur</legend>
+          <label><input type="radio" name="magazine" value="none" checked> Standard</label>
+          <label><input type="radio" name="magazine" data-magazine="10" data-reload="5"> Chargeur étendu (+10 coups, +5
+            % rechargement)</label>
+          <label><input type="radio" name="magazine" data-reload="-5"> Chargeur rapide (–5 % temps rechargement)</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Crosse</legend>
+          <label><input type="radio" name="stock" value="none" checked> Aucun</label>
+          <label><input type="radio" name="stock" data-mobility="5"> Crosse légère (+5 % mobilité)</label>
+          <label><input type="radio" name="stock" data-recoil="-10"> Crosse tactique (–10 % recul)</label>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- Tableau stats -->
+    <section class="stats-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Statistique</th>
+            <th>Valeur de base</th>
+            <th>Valeur actuelle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-stat="damage">
+            <td>Dégâts</td>
+            <td>80</td>
+            <td class="value">80</td>
+          </tr>
+          <tr data-stat="fire-rate">
+            <td>Cadence de tir (RPM)</td>
+            <td>600</td>
+            <td class="value">600</td>
+          </tr>
+          <tr data-stat="range">
+            <td>Portée efficace (m)</td>
+            <td>400</td>
+            <td class="value">400</td>
+          </tr>
+          <tr data-stat="mobility">
+            <td>Mobilité (%)</td>
+            <td>60</td>
+            <td class="value">60</td>
+          </tr>
+          <tr data-stat="precision">
+            <td>Précision (%)</td>
+            <td>70</td>
+            <td class="value">70</td>
+          </tr>
+          <tr data-stat="recoil">
+            <td>Recul (%)</td>
+            <td>50</td>
+            <td class="value">50</td>
+          </tr>
+          <tr data-stat="reload">
+            <td>Vitesse rechargement (s)</td>
+            <td>2.5</td>
+            <td class="value">2.5</td>
+          </tr>
+          <tr data-stat="magazine">
+            <td>Chargeur (coups)</td>
+            <td>30</td>
+            <td class="value">30</td>
+          </tr>
+          <tr data-stat="stability">
+            <td>Stabilité (%)</td>
+            <td>50</td>
+            <td class="value">50</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Arsenal COD</p>
+      <span class="footer-separator">|</span>
+      <a href="../about.html">À propos</a>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="../js/pages/stats.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arsenal COD - Accueil</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+</head>
+
+<body>
+  <!-- Header avec navigation principale -->
+  <header>
+    <h1>Arsenal COD</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="#categories">Catégories</a></li>
+        <li><a href="about.html">À propos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Bienvenue sur Arsenal COD</h2>
+        <p>Explorez et comparez les statistiques des armes de Call of Duty selon leur catégorie : portée, dégâts,
+          cadence, mobilité…</p>
+        <a href="#categories" class="btn">Voir les catégories</a>
+      </div>
+      <div class="hero-image">
+        <img src="assets/images/hero-weapons.png" alt="Illustration armes COD">
+      </div>
+    </section>
+
+    <!-- Description -->
+    <section class="description">
+      <h2>Fonctionnalités du site</h2>
+      <p>
+        Arsenal COD vous permet de calculer et de visualiser en temps réel les statistiques
+        de vos armes après avoir ajouté accessoires, atouts et modifications.
+      </p>
+      <ul>
+        <li class="tooltip" data-description="Ajoutez silencieux, canons, poignées…">
+          <strong>Modifications</strong>
+        </li>
+        <li class="tooltip" data-description="Comparez plusieurs configurations côte à côte.">
+          <strong>Comparaison</strong>
+        </li>
+        <li class="tooltip" data-description="Voir instantanément l’impact sur dégâts, portée, mobilité…">
+          <strong>Visualisation</strong>
+        </li>
+        <li class="tooltip" data-description="Filtrez par catégorie, type ou atout.">
+          <strong>Filtres</strong>
+        </li>
+        <li class="tooltip" data-description="Sauvegardez et partagez vos builds.">
+          <strong>Partage</strong>
+        </li>
+      </ul>
+      <p>
+        Testez différents accessoires et constatez immédiatement leur effet sur les performances.
+      </p>
+    </section>
+
+    <!-- Overview -->
+    <section class="overview" id="categories">
+      <article class="card">
+        <img src="assets/images/ar.png" alt="Assault Rifles">
+        <h3>Assault Rifles</h3>
+        <p>Polyvalence et précision à moyenne portée.</p>
+        <a href="ar.html" class="btn-small">Découvrir</a>
+      </article>
+
+      <article class="card">
+        <img src="assets/images/smg.png" alt="Submachine Guns">
+        <h3>Submachine Guns</h3>
+        <p>Cadence élevée pour le combat rapproché.</p>
+        <a href="smg.html" class="btn-small">Découvrir</a>
+      </article>
+      <article class="card">
+        <img src="assets/images/sniper.png" alt="Sniper Rifles">
+        <h3>Sniper Rifles</h3>
+        <p>Tir longue portée, dégâts critiques.</p>
+        <a href="sniper.html" class="btn-small">Découvrir</a>
+      </article>
+      <article class="card">
+        <img src="assets/images/lmg.png" alt="Light Machine Guns">
+        <h3>Light Machine Guns</h3>
+        <p>Volume de feu élevé et bonne stabilité.</p>
+        <a href="lmg.html" class="btn-small">Découvrir</a>
+      </article>
+      <article class="card">
+        <img src="assets/images/shotgun.png" alt="Shotguns">
+        <h3>Shotguns</h3>
+        <p>Dégâts massifs à très courte portée.</p>
+        <a href="shotgun.html" class="btn-small">Découvrir</a>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Arsenal COD</p>
+      <span class="footer-separator">|</span>
+      <a href="about.html">À propos</a>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
